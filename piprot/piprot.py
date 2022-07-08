@@ -320,7 +320,8 @@ def main(
                     print('{} ({}) is out of date. '
                           'Latest is {}'.format(req, version, latest_version))
                 elif not outdated:
-                    print('{} ({}) is up to date'.format(req, version))
+                    print('{} ({}) is up to date (last release {} days ago)'.format(
+                        req, version, (datetime.utcnow()-latest_release_date).days))
 
             if latest and latest_version != specified_version:
                 print('{}=={}  # Updated from {}'.format(req, latest_version,
