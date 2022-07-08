@@ -188,8 +188,10 @@ def get_version_and_release_date(requirement, version=None,
 
     try:
         if version:
-            if version in response['releases']:
+            if response.get('releases') and version in response['releases']:
                 release_date = response['releases'][version][0]['upload_time']
+            elif response['info']['version'] == version and response['urls']:
+                release_date = response['urls'][0]['upload_time']
             else:
                 return None, None
         else:

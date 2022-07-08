@@ -1,4 +1,4 @@
-NOTE: this package is no longer maintained. You can use ``pip list --outdated`` or ``pipenv update --outdated`` to show outdated packages (with a little less whimsy). 
+NOTE: this package is no longer maintained. You can use ``pip list --outdated`` or ``pipenv update --outdated`` to show outdated packages (without any date info! and a little less whimsy).
 
 
 piprot
